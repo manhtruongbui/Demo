@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDemoTable extends Migration
+class RenameDemoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class CreateDemoTable extends Migration
      */
     public function up()
     {
-        Schema::create('demo', function (Blueprint $table) {
-            $table->id();
-            $table->string('slide_url');
-            $table->string('title');
-            $table->string('content');
-            $table->timestamps();
+        Schema::table('demo', function (Blueprint $table) {
+            //
+            $table->rename('name','names');
         });
-        Schema::rename($demo, $mydemo);
     }
 
     /**
@@ -30,6 +26,8 @@ class CreateDemoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('demo');
+        Schema::table('demo', function (Blueprint $table) {
+            //
+        });
     }
 }
