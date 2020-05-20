@@ -1,0 +1,120 @@
+body{
+	background: white;
+	font-size: 16px;
+	font-weight: bold;
+}
+.container{
+	height: 100%;
+	align-items: center;
+}
+.digibook-header{
+	height: 80px;
+	position: relative;
+	border-bottom: 3px solid #dd0017;
+}
+.container .holder{
+	display: flex;
+	height: 100%;
+	justify-content: center;
+}
+.container .logo{
+	position: absolute;
+	left: 5px;
+}
+.logo img{
+	height: 25px;
+}
+.container .web-name{
+	font-size: 25px;
+	font-weight: 800;
+	color: red;
+}
+.container .buttons{
+	position: absolute;
+	right: 25px;
+	width: 160px;
+}
+.button{
+	background-color: #dd0017 !important;
+	border-radius: 0px !important;
+	margin-bottom: 0px !important;
+}
+/*page-web*/
+.form-demo{
+	margin: 0 auto;
+	max-width: 60%;
+}
+.form-input{
+	margin: 15px auto;
+	padding:15px;
+	text-align: center;
+}
+/*input .placeholder {
+    text-align: center;
+}*/
+.form-control .title{
+	margin: 15px auto;
+	padding:5px;
+	font-size: 34px;
+	color: #dd0017;
+}
+.form-group{
+	width: 100%;
+	border: 1px solid #dd0017;
+	border-radius: 4px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.form-content{
+	width: 50%;
+	margin: 15px auto;
+}
+.form-item{
+	width: 50%;
+}
+.title{
+	font-size: 20px;
+	font-weight: 600;
+	color: #dd0017;
+}
+.title-item{
+	width: 40%;
+	font-size: 20px;
+}
+.table-content{
+	width: 99%;
+	margin: 5px;
+	padding:5px;
+}
+/*footer*/
+.digibook-footer{
+	height: 48px;
+	position: fixed;
+	background: #dd0017;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.digibook-footer .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+.copyright{
+	font-size: 14px;
+	color: white;
+}
+.logo-text{
+	font-size: 8px;
+	color: white;
+}
+.logo-icon img {
+	height: 25px;
+}
+.logo-footer{
+	position: absolute;
+	right: 10px;
+	top:35%;
+}
