@@ -10,6 +10,7 @@
 				<th>Price</th>
 				<th>Height</th>
 				<th>Width</th>
+				<th>Comment</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -20,10 +21,12 @@
 				<td>{{$tem->price}}</td> 
 				<td>{{$tem->height}}</td> 
 				<td>{{$tem->width}}</td> 
+				<td>{{$tem->comment_text}}</td> 
 			</tr>
 			@endforeach 
 		</tbody>
 	</table>
+	
 	{!! $templates->links() !!}
 </div>
 

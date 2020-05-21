@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Request\InputFormRequest;
 use App\templates;
 use Illuminate\Support\Facades\DB;
 class FormdemoController extends Controller
@@ -10,20 +11,21 @@ class FormdemoController extends Controller
     //
 	public function getoutput(){
 		$templates=templates::all();
-		$templates = DB::table('templates')->paginate(5);
+		$templates = DB::table('templates')->paginate(10);
 		return view('form.formoutput',['templates'=>$templates]);
 	}
 
 	public function getinput(){
-		$templates = new templates();
 		return view('form.forminput');
 	}
-	public function postinput(Request $request){
+	public function postinput(Request  $request){
 		$validatedData = $request->validate([
+			'templates_type_id'=>'required',
 			'name' => 'required|min:3|max:100',
-			'price' => 'required',
+            'price' => 'required|numeric|min:100|max:1000000',
+            'height'=>'required|numeric|min:10',
+            'width'=>'required|numeric|min:10',
 		]);
-
 		$templates = new templates;
 		$templates->templates_type_id=$request->templates_type_id;
 		$templates->image_front_url=$request->image_front_url;
@@ -36,6 +38,6 @@ class FormdemoController extends Controller
 		$templates->width=$request->width;
 		$templates->comment_text=$request->comment_text;
 		$templates->save();
-		return view('form/formoutput');
+		return redirect('form/formoutput');
 	}
 }

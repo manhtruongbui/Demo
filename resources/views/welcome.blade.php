@@ -6,7 +6,7 @@
 	<title>Laravel</title>
 	<base href="{{asset('')}}">
 	<link rel="stylesheet" type="text/css" href="asset/css/style.css">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
 	<header id="header" class="digibook-header">
@@ -27,8 +27,7 @@
 	<!-- page-web -->
 	<div class="container">
 		<!-- form-demo -->
-
-	@yield('content')
+		@yield('content')
 
 	</div>
 
